@@ -1,6 +1,6 @@
 var url = 'http://api.icndb.com/jokes/random';
 
-var $button = $('#get-joke').click(function() {
+$('#get-joke').click(function() {
 	getJoke();
 });
 
