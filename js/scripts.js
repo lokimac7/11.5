@@ -1,25 +1,6 @@
-var url = 'http://api.icndb.com/jokes/random';
-
-$('#get-joke').click(function() {
-	getJoke();
-});
-
-var tweetLink = "https://twitter.com/intent/tweet?text=";
-var quoteUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&key=867576&format=jsonp&lang=en&jsonp=?";
-
-
-var $paragraph = $('#joke');
-
-function getJoke() {
-$.ajax({
-	method: 'GET',
-	url: url, 
-	success: function(res) {
-		$paragraph.text(res.value.joke);
-	}
-
-});
-}
+var url = 'http://api.icndb.com/jokes/random',
+	tweetLink = "https://twitter.com/intent/tweet?text=",
+	quoteUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&key=867576&format=jsonp&lang=en&jsonp=?";
 
 function getQuote() {
 	$.getJSON(quoteUrl, createTweet);
@@ -49,4 +30,3 @@ $(document).ready(function() {
 	});
 });
 
-getJoke();
